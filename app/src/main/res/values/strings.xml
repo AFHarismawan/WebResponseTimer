@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Web Response Timer</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="table_header">
+        <item>NO.</item>
+        <item>PYTHON</item>
+        <item>PHP</item>
+        <item>PERL</item>
+    </string-array>
+</resources>
