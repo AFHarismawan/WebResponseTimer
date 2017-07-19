@@ -1,7 +1,6 @@
 package net.gumcode.webresponsetimer;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     private String[] pythons = {Config.PYTHON_GET_ALL_URL + "_500.py", Config.PYTHON_GET_ALL_URL + "_1000.py", Config.PYTHON_GET_ALL_URL + "_2000.py", Config.PYTHON_GET_ALL_URL + "_5000.py", Config.PYTHON_GET_ALL_URL + "_10000.py"};
     private String[] perls = {Config.PERL_GET_ALL_URL + "_500.pl", Config.PERL_GET_ALL_URL + "_1000.pl", Config.PERL_GET_ALL_URL + "_2000.pl", Config.PERL_GET_ALL_URL + "_5000.pl", Config.PERL_GET_ALL_URL + "_10000.pl"};
     private AlertDialog dialog;
-    private ProgressDialog pd;
     private int selected = -1;
 
     @Override
@@ -67,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
         View content = getLayoutInflater().inflate(R.layout.dialog_content, null);
         ListView list = (ListView) content.findViewById(R.id.list);
         ArrayList<String> items = new ArrayList<>();
-        items.add("500");
-        items.add("1000");
-        items.add("2000");
         items.add("5000");
         items.add("10000");
+        items.add("15000");
+        items.add("20000");
+        items.add("40000");
         list.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items));
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
